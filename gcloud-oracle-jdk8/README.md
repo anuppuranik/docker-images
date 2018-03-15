@@ -1,4 +1,4 @@
-# Ubuntu gclcoud Oracle JDK 8
+# Ubuntu gcloud Oracle JDK 8
 
 Extends the Official latest Ubuntu Image.
 Installs the latest official Oracle JDK 8.
