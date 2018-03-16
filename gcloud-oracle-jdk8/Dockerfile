@@ -2,18 +2,20 @@ FROM ubuntu:latest
 
 MAINTAINER Anup Puranik <anuppuranik@gmail.com>
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y  software-properties-common && \
-    apt-get install -y zip unzip git ssh && \
-    add-apt-repository ppa:webupd8team/java -y && \
+RUN apt-get update && apt-get upgrade -y
+
+RUN apt-get install -y software-properties-common && \
+    apt-get install -y zip unzip git ssh
+
+RUN add-apt-repository ppa:webupd8team/java -y && \
     apt-get update && \
     echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
     apt-get install -y oracle-java8-installer && \
     apt-get install -y oracle-java8-set-default && \
     apt-get install -y oracle-java8-unlimited-jce-policy && \
-    apt-get clean && \
-    . /etc/os-release && \
+    apt-get clean
+
+RUN . /etc/os-release && \
     export CLOUD_SDK_REPO="cloud-sdk-${UBUNTU_CODENAME}" && \
     echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
     wget https://packages.cloud.google.com/apt/doc/apt-key.gpg && apt-key add apt-key.gpg && rm apt-key.gpg && \
