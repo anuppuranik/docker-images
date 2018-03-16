@@ -2,6 +2,8 @@ FROM ubuntu:latest
 
 MAINTAINER Anup Puranik <anuppuranik@gmail.com>
 
+LABEL maintainer="anuppuranik @t g m a i l c o m"
+
 # Upgrade the base distro
 RUN apt-get update && apt-get upgrade -y
 
