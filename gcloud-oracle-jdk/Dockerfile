@@ -9,7 +9,7 @@ RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y software-properties-common && \
     apt-get install -y zip unzip git ssh
 
-# Oracle JDK 8
+# Oracle JDK
 RUN add-apt-repository ppa:webupd8team/java -y && \
     apt-get update && \
     echo oracle-java9-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
