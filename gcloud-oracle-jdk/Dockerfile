@@ -10,12 +10,12 @@ RUN apt-get install -y software-properties-common && \
     apt-get install -y zip unzip git ssh
 
 # Oracle JDK
-RUN add-apt-repository ppa:webupd8team/java -y && \
+RUN add-apt-repository ppa:linuxuprising/java -y && \
     apt-get update && \
-    echo oracle-java9-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
-    apt-get install -y oracle-java9-installer && \
-    apt-get install -y oracle-java9-set-default && \
-    apt-get install -y oracle-java9-unlimited-jce-policy && \
+    echo oracle-java10-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
+    apt-get install -y oracle-java10-installer && \
+    apt-get install -y oracle-java10-set-default && \
+    apt-get install -y oracle-java10-unlimited-jce-policy && \
     apt-get clean
 
 # gcloud sdk
