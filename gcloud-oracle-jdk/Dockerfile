@@ -23,15 +23,16 @@ RUN . /etc/os-release && \
     echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
     wget https://packages.cloud.google.com/apt/doc/apt-key.gpg && apt-key add apt-key.gpg && rm apt-key.gpg && \
     apt-get update && \
-    apt-get install -y google-cloud-sdk && \
-    apt-get install -y google-cloud-sdk-app-engine-go && \
-    apt-get install -y google-cloud-sdk-app-engine-java && \
-    apt-get install -y google-cloud-sdk-app-engine-python && \
-    apt-get install -y google-cloud-sdk-bigtable-emulator && \
-    apt-get install -y google-cloud-sdk-cbt && \
-    apt-get install -y google-cloud-sdk-datalab && \
-    apt-get install -y google-cloud-sdk-datastore-emulator && \
-    apt-get install -y google-cloud-sdk-pubsub-emulator && \
+    apt-get install -y \
+        google-cloud-sdk \
+        google-cloud-sdk-app-engine-go \
+        google-cloud-sdk-app-engine-java \
+        google-cloud-sdk-app-engine-python \
+        google-cloud-sdk-bigtable-emulator \
+        google-cloud-sdk-cbt \
+        google-cloud-sdk-datalab \
+        google-cloud-sdk-datastore-emulator \
+        google-cloud-sdk-pubsub-emulator && \
     apt-get clean
 
 # make suitable for circle ci
