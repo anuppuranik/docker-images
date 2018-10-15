@@ -32,6 +32,7 @@ RUN . /etc/os-release && \
     apt-get install -y google-cloud-sdk-datalab && \
     apt-get install -y google-cloud-sdk-datastore-emulator && \
     apt-get install -y google-cloud-sdk-pubsub-emulator && \
+    apt-get install -y kubectl && \
     apt-get clean
 
 # make suitable for circle ci
