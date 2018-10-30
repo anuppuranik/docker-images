@@ -26,7 +26,7 @@ RUN . /etc/os-release && \
     apt-get install -y \
         google-cloud-sdk \
         google-cloud-sdk-app-engine-python \
-        google-cloud-sdk-pubsub-emulator && \
+        kubectl && \
     apt-get clean
 
 # Install yarn and node js
