@@ -6,22 +6,31 @@ LABEL maintainer="anuppuranik @t g m a i l c o m"
 RUN apt-get update && apt-get upgrade -y
 
 # Install some common tools and packages
-RUN apt-get install -y software-properties-common && \
-    apt-get install -y zip unzip git ssh
+RUN apt-get install -y software-properties-common \
+        zip \
+        unzip \
+        git \
+        ssh \
+        curl \
+        apt-transport-https \
+        ca-certificates
 
-# Install some common tools and packages
-RUN apt-get install -y software-properties-common && \
-    apt-get install -y zip unzip git ssh
 
 # Python 2.7
 RUN apt-get install -y \
     python2.7
 
+# Docker
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
+    add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && \
+    apt-get update && \
+    apt-get install -y docker-ce
+
 # gcloud sdk
 RUN . /etc/os-release && \
     export CLOUD_SDK_REPO="cloud-sdk-${UBUNTU_CODENAME}" && \
     echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
-    wget https://packages.cloud.google.com/apt/doc/apt-key.gpg && apt-key add apt-key.gpg && rm apt-key.gpg && \
+    curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
     apt-get update && \
     apt-get install -y \
         google-cloud-sdk \
