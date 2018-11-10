@@ -6,8 +6,14 @@ LABEL maintainer="anuppuranik @t g m a i l c o m"
 RUN apt-get update && apt-get upgrade -y
 
 # Install some common tools and packages
-RUN apt-get install -y software-properties-common && \
-    apt-get install -y zip unzip git ssh
+RUN apt-get install -y software-properties-common \
+        zip \
+        unzip \
+        git \
+        ssh \
+        curl \
+        apt-transport-https \
+        ca-certificates
 
 # Docker
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
