@@ -12,12 +12,12 @@ All images have the following, so they are pefect for use on Circle Ci.
 
 Docker tags:
 
-[![](https://images.microbadger.com/badges/version/anuppuranik/gcloud-oracle-jdk.svg)](https://microbadger.com/images/anuppuranik/gcloud-oracle-jdk "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/anuppuranik/gcloud-oracle-jdk.svg)](https://hub.docker.com/r/anuppuranik/gcloud-oracle-jdk "Go to docker hub")
 
-[![](https://images.microbadger.com/badges/version/anuppuranik/gcloud-oracle-jdk:jdk12.svg)](https://microbadger.com/images/anuppuranik/gcloud-oracle-jdk:jdk12 "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/anuppuranik/gcloud-oracle-jdk:jdk12.svg)](https://hub.docker.com/r/anuppuranik/gcloud-oracle-jdk "Go to docker hub")
 
 Deprecated:
 
-[![](https://images.microbadger.com/badges/version/anuppuranik/gcloud-oracle-jdk:jdk10.svg)](https://microbadger.com/images/anuppuranik/gcloud-oracle-jdk:jdk10 "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/anuppuranik/gcloud-oracle-jdk:jdk10.svg)](https://hub.docker.com/r/anuppuranik/gcloud-oracle-jdk "Go to docker hub")
 
-[![](https://images.microbadger.com/badges/version/anuppuranik/gcloud-oracle-jdk:jdk8.svg)](https://microbadger.com/images/anuppuranik/gcloud-oracle-jdk:jdk8 "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/anuppuranik/gcloud-oracle-jdk:jdk8.svg)](https://hub.docker.com/r/anuppuranik/gcloud-oracle-jdk "Go to docker hub")
