@@ -1,7 +1,8 @@
-# Ubuntu gcloud Oracle JDK
+# Ubuntu gcloud Python2 docker-ce
 
 Extends the Official latest Ubuntu Image.
 Installs python 2
+Installs docker-ce (to build and publish docker images)
 Adds a bunch of gcloud packages.
 
 Use as:
