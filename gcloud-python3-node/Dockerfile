@@ -15,7 +15,8 @@ RUN apt-get install -y software-properties-common \
         ssh \
         curl \
         apt-transport-https \
-        ca-certificates
+        ca-certificates \
+        gnupg
 
 
 # Python 2.7
@@ -30,7 +31,8 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
 
 # gcloud sdk
 RUN . /etc/os-release && \
-    export CLOUD_SDK_REPO="cloud-sdk-${UBUNTU_CODENAME}" && \
+    #export CLOUD_SDK_REPO="cloud-sdk-${UBUNTU_CODENAME}" && \
+    export CLOUD_SDK_REPO="cloud-sdk" && \
     echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
     curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
     apt-get update && \
