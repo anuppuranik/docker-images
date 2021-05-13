@@ -2,6 +2,8 @@ FROM ubuntu:latest
 
 LABEL maintainer="anuppuranik @t g m a i l c o m"
 
+ENV DEBIAN_FRONTEND=noninteractive 
+
 # Upgrade the base distro
 RUN apt-get update && apt-get upgrade -y
 
