@@ -39,6 +39,8 @@ RUN . /etc/os-release && \
     apt-get install -y \
         google-cloud-sdk \
         google-cloud-sdk-app-engine-python \
+        google-cloud-sdk-app-engine-python-extras \
+        google-cloud-sdk-datastore-emulator \
         kubectl && \
     apt-get clean
 
