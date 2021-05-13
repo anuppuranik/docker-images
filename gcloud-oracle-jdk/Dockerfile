@@ -33,7 +33,8 @@ RUN add-apt-repository ppa:linuxuprising/java -y && \
 
 # gcloud sdk
 RUN . /etc/os-release && \
-    export CLOUD_SDK_REPO="cloud-sdk-${UBUNTU_CODENAME}" && \
+    #export CLOUD_SDK_REPO="cloud-sdk-${UBUNTU_CODENAME}" && \
+    export CLOUD_SDK_REPO="cloud-sdk" && \
     echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
     wget https://packages.cloud.google.com/apt/doc/apt-key.gpg && apt-key add apt-key.gpg && rm apt-key.gpg && \
     apt-get update && \
