@@ -19,7 +19,7 @@ RUN apt-get install -y software-properties-common \
         gnupg
 
 
-# Python 2.7
+# Python 3
 RUN apt-get install -y \
     python3 python3-pip
 
@@ -46,7 +46,7 @@ RUN . /etc/os-release && \
 
 # Install yarn and node js
 RUN echo "Installing Yarn and Node" && \
-    wget https://deb.nodesource.com/setup_16.x && bash setup_16.x && \
+    wget https://deb.nodesource.com/setup_17.x && bash setup_17.x && \
     apt-get install -y nodejs && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee -a /etc/apt/sources.list.d/yarn.list && \
     wget https://dl.yarnpkg.com/debian/pubkey.gpg && apt-key add pubkey.gpg && rm pubkey.gpg && \
