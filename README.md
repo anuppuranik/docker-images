@@ -23,6 +23,6 @@ Deprecated:
 [![](https://images.microbadger.com/badges/version/anuppuranik/gcloud-oracle-jdk:jdk8.svg)](https://hub.docker.com/r/anuppuranik/gcloud-oracle-jdk "Go to docker hub")
 
 Maintain Commands:
-docker build -t anuppuranik/gcloud-python3-node:latest -t anuppuranik/gcloud-python3-node:v2 - < Dockerfile
+docker build -t anuppuranik/gcloud-python3-node:latest -t anuppuranik/gcloud-python3-node:$(date '+%Y%m%d') - < Dockerfile
+docker push anuppuranik/gcloud-python3-node:$(date '+%Y%m%d')
 docker push anuppuranik/gcloud-python3-node:latest
-
