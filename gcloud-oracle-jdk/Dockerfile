@@ -26,9 +26,8 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
 # Oracle JDK
 RUN add-apt-repository ppa:linuxuprising/java -y && \
     apt-get update && \
-    echo oracle-java16-installer shared/accepted-oracle-license-v1-2 select true | /usr/bin/debconf-set-selections && \
-    apt-get install -y oracle-java16-installer --install-recommends && \
-    apt-get install -y oracle-java16-set-default && \
+    echo oracle-java17-installer shared/accepted-oracle-license-v1-3 select true | /usr/bin/debconf-set-selections && \
+    apt-get install -y oracle-java17-installer --install-recommends && \
     apt-get clean
 
 # gcloud sdk
