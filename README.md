@@ -24,7 +24,16 @@ Deprecated:
 
 Maintenance Commands:
 
-```
+```commandline
 docker build -t anuppuranik/gcloud-python3-node:latest -t anuppuranik/gcloud-python3-node:$(date '+%Y%m%d') - < Dockerfile
 docker push anuppuranik/gcloud-python3-node:$(date '+%Y%m%d')
 docker push anuppuranik/gcloud-python3-node:latest
+```
+
+OR if using padman
+```commandline
+cd gcloud-python3-node
+podman build -t anuppuranik/gcloud-python3-node:latest -t anuppuranik/gcloud-python3-node:$(date '+%Y%m%d') .
+podman images
+podman push <image_id> docker://docker.io/anuppuranik/gcloud-python3-node:latest
+```
